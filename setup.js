@@ -8,7 +8,7 @@ const overallConf = {...backendConf,
                      ...dbConf }
 
 // Write the backend-configuration, which is everything
-fs.writeFileSync("backend/src/soile_resources/soile_config.json",JSON.stringify(overallConf))
+fs.writeFileSync("backend/src/soile_resources/soile_config.json",JSON.stringify(overallConf, null, 2))
 
 const frontEndVars = {
     BACKENDDOMAIN : backendConf.http_server.domain,
