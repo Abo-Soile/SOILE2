@@ -1,0 +1,38 @@
+{
+    "mongo": {
+        "host": "127.0.0.1",
+        "port": 27023,
+        "db_name": "soile",
+        "username" : "admin",
+        "password" : "admin" 
+    },
+
+    "db": {
+        "userCollection" : "users",		
+        "participantCollection" : "participants",
+        "projectInstanceCollection" : "projectInstances",
+        "projectCollection": "projects",
+        "taskCollection": "tasks",	
+        "experimentCollection" : "experiments",
+        "downloadCollection" : "downloads"
+    },
+    "db_user_fields": {
+        "experimentPermissionsField" : "experimentPermissions",
+        "projectPermissionsField" : "projectPermissions",
+        "instancePermissionsField" : "instancePermissions",
+        "userPermissionsField" : "permissions",
+        "taskPermissionsField" : "taskpermissions",
+        "usernameField" : "username",
+        "userEmailField" : "email",
+        "userFullNameField" : "fullname",
+        "ownerField" : "ownedExperiments",
+        "collaboratorField" : "collaboratedExperiments",
+        "participantField" : "participantIn",
+        "userRolesField" : "role",	
+        "usernameCredentialField" : "username",
+        "passwordField" : "password",
+        "passwordCredentialField" : "password",
+        "storedSessions" : "storedSessions"
+            
+    }
+}

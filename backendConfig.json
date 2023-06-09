@@ -1,0 +1,30 @@
+{
+    "api" : "api.yml",
+    "http_server": {
+        "port": 8082,
+        "domain": "localhost",				
+        "directory": "./static_files",
+        "template_folder":"templates/",
+        "debug":true,
+        "sessionStoreSecret" : "UaOKMOxeBGP5rYtmAkWlnWrm875Jusnq4m/fn6fx8uKJcKILHuS1ecZzBaS9cSX2thq60P/VwcsY",
+        "jwtStoreSecret" : "storeserect",        
+        "gitVerticleAddress" : "githandler",
+        "soileGitFolder" : "/tmp/soile/git",
+        "soileGitDataLakeFolder" : "/tmp/soile/gitLake",
+        "soileResultDirectory" : "/tmp/soile/resultLake",
+        "taskLibraryFolder" : "/tmp/soile/libFolder",
+        "sslStoreFile" : "soile-keystore.p12",		
+        "sslSecret" : "secret",
+        "useSSL" : true,
+        "corsURLS" : []
+    },
+        
+    "tasks":{		
+        "availableVersions" : {
+                                "qmarkup" : { "versions" : ["1.0"], "mimeType" : "application/json" },
+                                "elang" : { "versions" : ["1.0"], "mimeType" : "application/javascript" },
+                                "psychopy" : { "versions" : ["2022.2.5"], "mimeType" : "application/javascript"},
+                                "javascript": {"versions" : ["ES6", "ECMAScript 2020"], "mimeType" : "application/javascript"}
+                                }
+    }
+}
