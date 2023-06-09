@@ -1,58 +1,80 @@
 #!/usr/bin/env node
 
-const readline = require('readline');
-const fs = require('filesystem');
+// Intentionally only using node internal functionality.
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const fs = require('fs');
 
-function promptUsername() {
-  return new Promise((resolve) => {
-    rl.question('Enter username: ', (username) => {
-      resolve(username);
-    });
-  });
-}
 
-function promptPassword() {
-  return new Promise((resolve) => {
-    rl.question('Enter password: ', (password) => {
-      resolve(password);
-    });
-  });
-}
-
-function promptConfirmPassword() {
-  return new Promise((resolve) => {
-    rl.question('Confirm password: ', (confirmPassword) => {
-      resolve(confirmPassword);
-    });
-  });
-}
-
-async function main() {
-  const username = await promptUsername();
-  const password = await promptPassword();
-  const confirmPassword = await promptConfirmPassword();
-
-  // Check if password matches the confirmation
-  while (password !== confirmPassword) {
-    console.log('Password confirmation does not match. Please try again.');
-    const newPassword = await promptPassword();
-    const newConfirmPassword = await promptConfirmPassword();
-    password = newPassword;
-    confirmPassword = newConfirmPassword;
-  }
-
+function prompt(question, hideInput) {
+    return new Promise((resolve) => {
+        process.stdout.write(question);
+        if(hideInput)
+        {
+            process.stdin.setRawMode(true);
+            const inputBuffer = [];    
+            process.stdin.on('data', function onData(data) {                
+                const char = data.toString();            
+                if (char === '\n' || char === '\r') {
+                  process.stdout.write('\n');
+                  process.stdin.pause();
+                  process.stdin.removeListener('data', onData);
+                  resolve(inputBuffer.join(''));
+                } else if (char === '\u0003') {
+                  process.stdout.write('\n');
+                  process.stdin.pause();
+                  process.stdin.removeListener('data', onData);                  
+                  process.exit();
+                } else if (char === '\u007f') {
+                    inputBuffer.pop();                    
+                    process.stdout.clearLine();                    
+                    process.stdout.cursorTo(0);                    
+                    process.stdout.write(question + '*'.repeat(inputBuffer.length));
+                } else {
+                  inputBuffer.push(char);
+                  process.stdout.write('*');
+                }
+              });
+        }
+        else{
+            process.stdin.on('data', (data) => {
+                const string = data.toString();   
+                    resolve(string.trim());          
+                });
+        }
+    
+        process.stdin.resume();
+      });
+    }
+  
+  async function main() {
+    const username = await prompt('Enter username: ');
+    var password = await prompt('Enter password: ', true);
+    var confirmPassword = await prompt('Confirm password: ', true);
+  
+    // Check if password matches the confirmation
+    while (password !== confirmPassword || (password.length < 10)) {
+      if(password.length < 10)
+      {
+        console.log("Password must be at least 10 characters long")
+      }
+      else
+      {
+        console.log('Password confirmation does not match. Please try again.');
+      }
+      const newPassword = await prompt('Enter password: ', true);
+      const newConfirmPassword = await prompt('Confirm password: ', true);
+      password = newPassword;
+      confirmPassword = newConfirmPassword;
+    }
   // Output the entered username and password
   const setup_json = { 
                         adminuser: username,
                         adminpassword:password
                     }
   fs.writeFileSync('backend/src/soile_resources/setup.json', JSON.stringify(setup_json))
-  rl.close();
 }
 
-main();
+main().catch((error) => {
+    console.error('An error occurred:', error);
+    process.exit(1);
+  });
