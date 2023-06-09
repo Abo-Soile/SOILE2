@@ -1,7 +1,6 @@
-cd backend
-
 node createSetup.js
 
+cd backend
 # Check the exit status of the Node.js script
 if [[ $? -ne 0 ]]; then
   echo "Node.js script was interrupted. Exiting."
