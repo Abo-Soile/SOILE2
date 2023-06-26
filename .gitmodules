@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = https://github.com/Abo-Soile/SOILE-BackendServer
+	url = git@github.com:Abo-Soile/SOILE-BackendServer.git
 [submodule "experimentrunner"]
 	path = experimentrunner
 	url = git@github.com:Abo-Soile/SOILE-ExperimentRunner.git
