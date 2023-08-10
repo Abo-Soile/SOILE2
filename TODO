@@ -1,0 +1,35 @@
+[X] For the elang code: provide formerly stored persistant data for a participant on an endpoint. The e_language runner will convert the outputs back and forth.
+
+- [x] Back-end implementation to retrieve Output Data of a user
+- [x] Front-End implementation in the elanguage runner to convert the data into what is expected by the back-end (and the back-end data into whats expected byt he front-end)
+      [X] User Management in the Front-End.
+      [X] Java-Script API for the frontend
+
+[X] BackEnd: Make Element Instances have positions.
+
+[X] Check, whether Experiments should also get an explicit START node (which is overridden by randomization)
+
+[ ] ?? LOGIC Change: EXECUTE Permissions don't make any sense. This MUST be a separate permissions Array, acess to which is controlled via the study end points and is independent of other types of permissions, i.e. under the control of a researcher with full access to a Study. Currently execute interfers with setting permissions for project components quite substantially. ??
+
+[ ] Cleanup for orphan files, i.e. files that were uploaded during a project but not associated with an actual result.
+[ ] Cleanup for orphan git versions. Need to check how we can clean up the git database makeing sure not to loose any versions that are still required.
+[ ] Persistant Data for JS.
+
+Usability
+[ ] Help with building Filters (checking, whether it's possible etc)
+[ ] Tag Management for Elements
+
+- [ ] Allow Removing tags from Elements
+  - [ ] Back-End
+  - [ ] Front-End
+- [ ] Allow Adding Tags to Elements (e.g. when loading an untagged version of a task where the tag had been removed)
+  - [ ] Back-End
+  - [ ] Front-End
+
+[ ] Export/Import PsychoJS Tasks
+
+- [ ] Back-End Load/Save a Task from/yo a Zip File
+- [ ] Front-End Upload a Zip file
+- [ ] Helper functionality to covert an existint task?
+
+[ ] Back-End Avoid duplicate files in the DataLake (potentially doable via using md5 hashes for the files instead of temporary file names, but is it too expensive?)
