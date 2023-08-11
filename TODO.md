@@ -40,5 +40,9 @@ Front-End:
 - [x] Link to Open Tasks from the Project/Experiment Editor
 - [ ] Layouting for the Editor Components
 
+- [ ] Keep state of data in the tabs.
+
 Back-End:
-[ ] Back-End Avoid duplicate files in the DataLake (potentially doable via using md5 hashes for the files instead of temporary file names, but is it too expensive?)
+
+- [ ] Back-End Avoid duplicate files in the DataLake (potentially doable via using md5 hashes for the files instead of temporary file names, but is it too expensive?)
+- [ ] Make sure the access token gets supplied along with the results for a participant (if available)
