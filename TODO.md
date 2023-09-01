@@ -31,18 +31,22 @@ Usability
 - [x] Helper functionality to covert an existing PsychoJS task?
       [ ] Import/Export Tasks
 - [x] Back-End Load/Save a Task from/yo a Zip File
-- [ ] Front-End Upload a Zip file
+- [x] Front-End Upload a Zip file
 
 Front-End:
 
 - [ ] Handling of unversioned Elements in the Experiment/Project editors
-- [ ] Link to Open Tasks from the Project/Experiment Editor
 - [x] Link to Open Tasks from the Project/Experiment Editor
-- [ ] Layouting for the Editor Components
+- [x] Link to Open Experiments from the Project/Experiment Editor
+- [x] Layouting for the Editor Components
 
-- [ ] Keep state of data in the tabs.
+- [ ] Keep state of data in the tabs. (partially done, needs testing)
 
 Back-End:
 
 - [ ] Back-End Avoid duplicate files in the DataLake (potentially doable via using md5 hashes for the files instead of temporary file names, but is it too expensive?)
 - [ ] Make sure the access token gets supplied along with the results for a participant (if available)
+
+Data Security:
+
+- [ ] Indicator for Participants who withdrew their data
