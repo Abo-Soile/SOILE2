@@ -58,7 +58,16 @@ Back-End:
 
 - [ ] Back-End Avoid duplicate files in the DataLake (potentially doable via using md5 hashes for the files instead of temporary file names, but is it too expensive?)
 - [ ] Make sure the access token gets supplied along with the results for a participant (if available)
+- [ ] Fix
+      Data Security:
 
-Data Security:
-
+- [x] Fix Registering
 - [ ] Indicator for Participants who withdrew their data
+- [x] Fix loading of questionnaire markup
+- [ ] Check what's going wrong with chrome in piloting
+- [ ] how to create "personalized" links / identifyable link (maybe using the token from signup?)
+- [x] Add Timestamps to results
+- [ ] Allow Continue/Start buttons to be in a specific language. (Probably best to define in the study)
+
+- [ ] Allow setting questions to be required/optional (QMarkup)
+- [ ] Indicator for number of attempts
