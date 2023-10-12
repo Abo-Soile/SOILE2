@@ -16,13 +16,13 @@
   - [x] Cleanup for orphan git versions. Need to check how we can clean up the git database makeing sure not to loose any versions that are still required.
   - [ ] Automatic cleanup (including object cleanup);
 
-[ ] Persistant Data for JS.
+[X] Persistant Data for JS.
 
 Usability
 
-- [ ] Help with building Filters (checking, whether it's possible etc)
+- [x] Help with building Filters (checking, whether it's possible etc)
 
-  - [ ] Some Pseudo Math editor like functionality or logical editor. This could be done via baklava, but probably unnecesarily complex. Something that allows to drag available outputs and puts them in a scheme with operators?
+  - [x] Some Pseudo Math editor like functionality or logical editor. This could be done via baklava, but probably unnecesarily complex. Something that allows to drag available outputs and puts them in a scheme with operators?
         [X] Tag Management for Elements
 
 - [x] Allow Removing tags from Elements
@@ -48,7 +48,7 @@ Front-End:
 - [x] Layouting for the Editor Components
 
 - [ ] Keep state of data in the tabs. (partially done, needs testing)
-- [ ] Piloting
+- [x] Piloting
   - Add option to define some parameters
 - [ ] Task Preview
   - [x] Run Tasks independently
@@ -58,16 +58,14 @@ Back-End:
 
 - [ ] Back-End Avoid duplicate files in the DataLake (potentially doable via using md5 hashes for the files instead of temporary file names, but is it too expensive?)
 - [ ] Make sure the access token gets supplied along with the results for a participant (if available)
-- [ ] Fix
-      Data Security:
 
 - [x] Fix Registering
 - [ ] Indicator for Participants who withdrew their data
 - [x] Fix loading of questionnaire markup
-- [ ] Check what's going wrong with chrome in piloting
-- [ ] how to create "personalized" links / identifyable link (maybe using the token from signup?)
+- [x] Check what's going wrong with chrome in piloting
+- [x] how to create "personalized" links / identifyable link (maybe using the token from signup?)
 - [x] Add Timestamps to results
-- [ ] Allow Continue/Start buttons to be in a specific language. (Probably best to define in the study)
+- [x] Allow Continue/Start buttons to be in a specific language. (Probably best to define in the study)
 
-- [ ] Allow setting questions to be required/optional (QMarkup)
-- [ ] Indicator for number of attempts
+- [x] Allow setting questions to be required/optional (QMarkup)
+- [ ] Indicator for number of attempts ?
