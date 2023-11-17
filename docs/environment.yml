@@ -1,0 +1,7 @@
+name: soile_docs_environment
+channels:
+  - conda-forge
+dependencies:
+  - sphinx
+  - myst-parser
+  - sphinx_rtd_theme
