@@ -2,10 +2,10 @@
 
 ## Prerequesites:
 
-[Docker](https://docs.docker.com/engine/install/), for the mongo database
-[NGINX](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) for reverse proxying Front and back-end and handling https issues
-[Let's encrypt](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/) for nginx for https certificates
-npm and a current [nodeJS](https://github.com/nodesource/distributions) (definitely working is 18) for frontend setup
+[Docker](https://docs.docker.com/engine/install/), for the mongo database  
+[NGINX](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) for reverse proxying Front and back-end and handling https issues  
+[Let's encrypt](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/) for nginx for https certificates  
+npm and a current [nodeJS](https://github.com/nodesource/distributions) (definitely working is 18) for frontend setup  
 git for installation
 
 ## Soile installation
@@ -32,12 +32,12 @@ There are 2 Files that need modification:
 
 2. `backendConfig.json`
    - There are a couple of fields in here need to be adapted to your setup.
-     - `domain`: "This has to be the domain your service is running on",
-     - `sessionStoreSecret` : "Use some proper secret here!",
-     - `jwtStoreSecret` : "Use some proper secret here",
-     - `sslStoreFile` : "/path/to/your/cerificate/fullchain.pem",
-     - `sslSecret` : "/path/to/your/cerificate/privkey.pem",
-     - `corsURLS` : ["https://your.domain", "https://your.domain:443"]
+     - `http_server.domain`: "This has to be the domain your service is running on",
+     - `http_server.sessionStoreSecret` : "Use some proper secret here!",
+     - `http_server.jwtStoreSecret` : "Use some proper secret here",
+     - `http_server.sslStoreFile` : "/path/to/your/cerificate/fullchain.pem",
+     - `http_server.sslSecret` : "/path/to/your/cerificate/privkey.pem",
+     - `http_server.corsURLS` : ["https://your.domain", "https://your.domain:443"]
        - This is important to allow the backend to reply to the front-end. If not set, browsers will throw CORS violations,
          as the back-end server runs on a different port than the nginx hosting the system.
 
