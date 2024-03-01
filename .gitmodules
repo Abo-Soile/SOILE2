@@ -4,6 +4,3 @@
 [submodule "experimentrunner"]
 	path = experimentrunner
 	url = git@github.com:Abo-Soile/SOILE-ExperimentRunner.git
-[submodule "editor"]
-	path = editor
-	url = git@github.com:Mahtis/soile-editor.git
