@@ -1,2 +1,4 @@
 database/**/*
 .mongoenv
+backendConfig.json
+dbConfig.json

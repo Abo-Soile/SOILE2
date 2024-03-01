@@ -78,11 +78,11 @@ it.
 ~~~~~~~~~~~~~~~~~~~
 
 * If you want to load a different version of your task for editing, you can do so by clicking on 
-select Version. At the moment, only one version of our task exists, so there is not really anything to 
-choose from. 
+  select Version. At the moment, only one version of our task exists, so there is not really anything to 
+  choose from. 
 * Clicking on Reload, will remove all changes done to the task since you last saved it.
-* You can use the "Manage Versions" button to manage the visible versions of the Task. Removing a Tag makes 
-  this tag no longer selectable 
+* You can use the "Manage Versions" button to manage the visible versions of the Task. Removing a Tag 
+  makes this tag no longer selectable 
 * To add files (e.g. images or other other code) to your You can use the File browser on the right.
 
 

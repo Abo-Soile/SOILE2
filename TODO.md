@@ -69,3 +69,5 @@ Back-End:
 
 - [x] Allow setting questions to be required/optional (QMarkup)
 - [ ] Indicator for number of attempts ?
+
+- [ ] Check Study Management for saving data to the study.

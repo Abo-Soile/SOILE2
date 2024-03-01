@@ -1,7 +1,7 @@
 {
     "api" : "api.yml",
     "http_server": {
-        "port": 8082,
+        "port": 8081,
         "domain": "localhost",				
         "directory": "./static_files",
         "template_folder":"templates/",
@@ -9,14 +9,14 @@
         "sessionStoreSecret" : "UaOKMOxeBGP5rYtmAkWlnWrm875Jusnq4m/fn6fx8uKJcKILHuS1ecZzBaS9cSX2thq60P/VwcsY",
         "jwtStoreSecret" : "storeserect",        
         "gitVerticleAddress" : "githandler",
-        "soileGitFolder" : "/tmp/soile/git",
-        "soileGitDataLakeFolder" : "/tmp/soile/gitLake",
-        "soileResultDirectory" : "/tmp/soile/resultLake",
-        "taskLibraryFolder" : "/tmp/soile/libFolder",
+        "soileGitFolder" : "git",
+        "soileGitDataLakeFolder" : "gitLake",
+        "soileResultDirectory" : "resultLake",
+        "taskLibraryFolder" : "libFolder",
         "sslStoreFile" : "soile-keystore.p12",		
         "sslSecret" : "secret",
         "useSSL" : true,
-        "corsURLS" : []
+        "corsURLS" : ["http://localhost:5173", "https://localhost:5173"]
     },
         
     "tasks":{		
