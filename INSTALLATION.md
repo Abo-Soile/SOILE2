@@ -63,7 +63,6 @@ that need to be forwarded to the back-end as the back-end also acts as a file se
 
 The config contains several locations which are the ones forwarding specific requests for files.
 The final two locations are for help-files, which are static and the entry-point and catch-all of the front-end.
-The order is important, as any request will first be forwarded to the back-end if the path matches, and only then be handled by the front-end.
 
 What needs to be changed in this file are the lines:
 
