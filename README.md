@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="docs/source/_static/images/logos/magics.png" height="200"/>
+  <img src="docs/source/_static/images/logos/aalto.png" height="200"/>
+  <img src="docs/source/_static/images/logos/abo.png" height="200"/>
+</p>
+
 # SOILE - A Infrastructure for online experiments
 
 The SOILE infrastructure provides a web-service for running (psychological) experiments collecting data from participants.
