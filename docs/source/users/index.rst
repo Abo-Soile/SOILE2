@@ -14,4 +14,6 @@ extensive studies for research purposes.
    :caption: Contents:
 
    concepts
-   quickstart/index.rst
+   quickstart/index
+   tasks/index
+   

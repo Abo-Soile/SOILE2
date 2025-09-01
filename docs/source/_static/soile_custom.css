@@ -1,0 +1,21 @@
+/* Custom CSS for responsive image layout in Sphinx */
+.responsive-image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+.responsive-image-row .figure {
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+@media (max-width: 900px) {
+  .responsive-image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .responsive-image-row .figure {
+    max-width: 90vw;
+  }
+}

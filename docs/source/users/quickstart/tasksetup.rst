@@ -1,5 +1,5 @@
-Task Setup
-==========
+Quickstart : Task
+=================
 
 This Guide shows you what to do to create a new task. The guide uses a very simplistic 
 questionnaire containing a consent form. Examples of other Tasks can be found in the 
@@ -7,8 +7,8 @@ Task library ( add link once set up)
 
 So let's start
 
-1. Initialize a new Task
-~~~~~~~~~~~~~~~~~~~~~~~~
+Initialize a new Task
+~~~~~~~~~~~~~~~~~~~~~
 
 To create a Task you go to Project Editing -> Tasks -> New, which will lead you to the following view
 
@@ -38,8 +38,8 @@ to have multiple versions of a task (e.g. agreements specific for a given study)
    the task that is mostly meaningless.
 
 
-2. Set up your First task
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Set up your First task
+~~~~~~~~~~~~~~~~~~~~~~
 The SOILE platform does provide a few basic Tasks on setup as examples, but we will 
 create a simple Questionnaire task that asks the participant to consent to their data 
 being stored (NOTE: This is not a proper consent form. For actual studies, please work 
@@ -63,8 +63,8 @@ Now click the `Create Task` button.
 You will be presented with a Dialog, asking to put in a version Name for this task. The versioning
 approach was mentioned in the :ref:`Concepts about versioning section<SOILE Concepts>`
 
-3. Test your task
-~~~~~~~~~~~~~~~~~
+Test your task
+~~~~~~~~~~~~~~
 
 You should now have a screen that looks roughly like this:
 
@@ -74,8 +74,8 @@ You should now have a screen that looks roughly like this:
 You can test your task by clicking on the "Start Task" button, which will run your task and display 
 it. 
 
-4. Modify your task
-~~~~~~~~~~~~~~~~~~~
+Modify your task
+~~~~~~~~~~~~~~~~
 
 * If you want to load a different version of your task for editing, you can do so by clicking on 
   select Version. At the moment, only one version of our task exists, so there is not really anything to 
