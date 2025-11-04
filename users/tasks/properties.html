@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Properties &mdash; SOILE 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css?v=64f265d2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/soile_custom.css?v=23852827" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Javascript Tasks" href="javascript.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SOILE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Researcher’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../concepts.html">SOILE Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart/index.html">Setting up a small project in SOILE</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tasks in the SOILE Framework</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="supported.html">Supported Formats</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Task Properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#result-data">Result Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-data">File Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-data">Output Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#persistent-data">Persistent Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SOILE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Researcher’s Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tasks in the SOILE Framework</a></li>
+      <li class="breadcrumb-item active">Task Properties</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/users/tasks/properties.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="task-properties">
+<h1>Task Properties<a class="headerlink" href="#task-properties" title="Link to this heading"></a></h1>
+<p>As with all other objects in SOILE a task is versioned as mentioned in the <a class="reference internal" href="../concepts.html"><span class="doc">concept section</span></a>.
+In addition, tasks, as the actual processing units are responsible to generate the data collected by the system.
+As such they can generate the following types of data:
+1. Result Data
+2. File Data
+3. Output Data
+4. Persistent Data</p>
+<section id="result-data">
+<h2>Result Data<a class="headerlink" href="#result-data" title="Link to this heading"></a></h2>
+<p>Result data is the most common type of data generated by a task. It is data in a JSON like format,
+i.e. matching keys to values. This data is for external data evaluation, and can contain e.g.
+answers to a questionnaire or results from a reaction test, among others.</p>
+</section>
+<section id="file-data">
+<h2>File Data<a class="headerlink" href="#file-data" title="Link to this heading"></a></h2>
+<p>This is essentially the same as Result Data, but refers to data that is too large to store in a field of a database.
+Examples can be e.g. video or audio recordings that tend to become quite large. This data is handled
+differently by the system. Currently only Javascript tasks support this type of data processing.</p>
+</section>
+<section id="output-data">
+<h2>Output Data<a class="headerlink" href="#output-data" title="Link to this heading"></a></h2>
+<p>Output data is a special category of result data. Output data has to be numeric and can be used as filters
+to guide the study flow for a participant. You could e.g. decide, that a given questionnaire is only presented
+to participant who answered in a specific way to some question. This answer would then be marked as output data
+on the quastionnaire language task and can be used in the next experiment to not present a certain step.</p>
+</section>
+<section id="persistent-data">
+<h2>Persistent Data<a class="headerlink" href="#persistent-data" title="Link to this heading"></a></h2>
+<p>Similar to Result data Persistent Data is a special category of Result data, that is available in other tasks.
+Persistent data can be generated from any variable created in a Questionnaire Language task. The Experiment
+Language also allows definition of persistent variables (TODO: Add details here). And in javascript you can add
+persistent data within the task. However, due to the way javascript generates variables, there is no automatic way to
+extract the possible available persistent variables, and they are hard coded in js.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="javascript.html" class="btn btn-neutral float-left" title="Javascript Tasks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Thomas Pfau, Daniel Warna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quickstart : Task &mdash; SOILE 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css?v=64f265d2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/soile_custom.css?v=23852827" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tasks in the SOILE Framework" href="../tasks/index.html" />
+    <link rel="prev" title="Setting up a small project in SOILE" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SOILE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Researcher’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../concepts.html">SOILE Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Setting up a small project in SOILE</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Quickstart : Task</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initialize-a-new-task">Initialize a new Task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-your-first-task">Set up your First task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-your-task">Test your task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modify-your-task">Modify your task</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks/index.html">Tasks in the SOILE Framework</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SOILE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Researcher’s Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Setting up a small project in SOILE</a></li>
+      <li class="breadcrumb-item active">Quickstart : Task</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/users/quickstart/tasksetup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quickstart-task">
+<h1>Quickstart : Task<a class="headerlink" href="#quickstart-task" title="Link to this heading"></a></h1>
+<p>This Guide shows you what to do to create a new task. The guide uses a very simplistic
+questionnaire containing a consent form. Examples of other Tasks can be found in the
+Task library ( add link once set up)</p>
+<p>So let’s start</p>
+<section id="initialize-a-new-task">
+<h2>Initialize a new Task<a class="headerlink" href="#initialize-a-new-task" title="Link to this heading"></a></h2>
+<p>To create a Task you go to Project Editing -&gt; Tasks -&gt; New, which will lead you to the following view</p>
+<img alt="Task Creation View" src="../../_images/TaskCreationView.png" />
+<p>The first step in creating a task is to select a task name, the type of Task
+(e.g. SOILE Questionnaire language) and the version of the language (if applicable, e.g.
+for PsychoJS experiments).</p>
+<p>For this tutorial, we will create a simple questionnaire. So lets select qmarkup,
+i.e. the SOILE questionnaire markup language in the code style dropdown.</p>
+<p>This will open the Task editing view:</p>
+<img alt="Task Creation View" src="../../_images/TaskBuildView.png" />
+<p>Let’s call our task “Agreement”, by entering it into the task name field. The name is important and
+had to be unique for each Task. That means no two tasks can have the same name. It is however possible
+to have multiple versions of a task (e.g. agreements specific for a given study).</p>
+<div class="admonition-task-created admonition">
+<p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">Task</span> <span class="pre">Created</span></code></p>
+<p>At this point the Task has not actually been created yet, as you haven’t
+clicked on the create Task Button. This is to avoid having an “empty” version of
+the task that is mostly meaningless.</p>
+</div>
+</section>
+<section id="set-up-your-first-task">
+<h2>Set up your First task<a class="headerlink" href="#set-up-your-first-task" title="Link to this heading"></a></h2>
+<p>The SOILE platform does provide a few basic Tasks on setup as examples, but we will
+create a simple Questionnaire task that asks the participant to consent to their data
+being stored (NOTE: This is not a proper consent form. For actual studies, please work
+with your ethics and data protection support to create a proper consent form).</p>
+<p>The main code file of your task is displayed in the center of the screen. Enter the
+following code there:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">title</span>
+<span class="n">Consent</span> <span class="n">Form</span>
+<span class="n">By</span> <span class="n">agreeing</span> <span class="n">to</span> <span class="n">this</span> <span class="n">consent</span> <span class="n">form</span><span class="p">,</span> <span class="n">you</span> <span class="n">agree</span> <span class="n">that</span> <span class="nb">all</span> <span class="n">data</span> <span class="n">you</span> <span class="n">provide</span> <span class="n">within</span> <span class="n">this</span> <span class="n">study</span> <span class="n">will</span> <span class="n">be</span> <span class="n">stored</span> <span class="k">for</span> <span class="n">research</span> <span class="n">purposes</span><span class="o">.</span>
+<span class="o">/</span><span class="n">singleselect</span> <span class="p">{</span>
+  <span class="n">default_value</span><span class="p">:</span> <span class="s2">&quot;-1&quot;</span><span class="p">,</span>
+  <span class="n">dbcolumn</span><span class="p">:</span> <span class="s2">&quot;agreement&quot;</span><span class="p">,</span>
+  <span class="n">options</span><span class="p">:</span> <span class="p">[[{</span><span class="n">dbvalue</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;Agree&quot;</span><span class="p">},</span>
+             <span class="p">{</span><span class="n">dbvalue</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="s2">&quot;Disagree&quot;</span><span class="p">}]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Now click the <cite>Create Task</cite> button.
+You will be presented with a Dialog, asking to put in a version Name for this task. The versioning
+approach was mentioned in the <a class="reference internal" href="../concepts.html#soile-concepts"><span class="std std-ref">Concepts about versioning section</span></a></p>
+</section>
+<section id="test-your-task">
+<h2>Test your task<a class="headerlink" href="#test-your-task" title="Link to this heading"></a></h2>
+<p>You should now have a screen that looks roughly like this:</p>
+<img alt="Task Creation View" src="../../_images/TaskEditing.png" />
+<p>You can test your task by clicking on the “Start Task” button, which will run your task and display
+it.</p>
+</section>
+<section id="modify-your-task">
+<h2>Modify your task<a class="headerlink" href="#modify-your-task" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you want to load a different version of your task for editing, you can do so by clicking on
+select Version. At the moment, only one version of our task exists, so there is not really anything to
+choose from.</p></li>
+<li><p>Clicking on Reload, will remove all changes done to the task since you last saved it.</p></li>
+<li><p>You can use the “Manage Versions” button to manage the visible versions of the Task. Removing a Tag
+makes this tag no longer selectable</p></li>
+<li><p>To add files (e.g. images or other other code) to your You can use the File browser on the right.</p></li>
+</ul>
+<div class="admonition-saving-tasks admonition">
+<p class="admonition-title"><code class="docutils literal notranslate"><span class="pre">Saving</span> <span class="pre">Tasks</span></code></p>
+<p>Any changes you do to a task are only saved, once you click the “Save” button and provided a new
+version tag. Without providing a new version tag, any changes will be lost.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Setting up a small project in SOILE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tasks/index.html" class="btn btn-neutral float-right" title="Tasks in the SOILE Framework" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Thomas Pfau, Daniel Warna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
