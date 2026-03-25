@@ -95,3 +95,26 @@ This is pretty straight forward. Simply run `./updateSOILE.sh` from the main fol
 
 ## Ensuring that the service is running on reboot
 
+Create a system service file in /etc/systemd/system/soile.service:
+```
+[Unit]
+Description=Soile System service
+Requires=docker.service
+After=docker.service
+StartLimitIntervalSec=60
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/SOILE/
+ExecStart=/SOILE/startSOILE.sh
+ExecStop=/SOILE/stopSOILE.sh
+TimeoutStartSec=0
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Enable this system service `systemctl enable soile.service` and start it `systemct start soile.service`.
+This should keep the service running/restarted after a system restart. 
