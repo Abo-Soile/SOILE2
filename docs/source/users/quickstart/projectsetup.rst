@@ -7,8 +7,7 @@ Let's begin
 Initialize a new Project
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a Project you go to Project Editing -> Project -> New, which will lead you to the following view
-
+To create a Project you go to Project Editing -> Project -> New, which will lead you a view similar to the experiment view.
 The overall setup is the same as for experiments, and you can do pretty much the same things in a project that you can do in an experiment.
 The main difference is that Experiments are conceptually more about grouping tasks together, while projects are the blueprints for studies. 
 We will now create our first project AND look at a few features that we have passed by in the experiment setup. 
@@ -23,54 +22,40 @@ What we want to do in the project is to:
 3. Finally we want both pathes to run a final Task, which is the same for smokers and non smokers.
 
 
-Lets start by adding a Task Node to our project, setting it to "QuetionnaireExample" and the version to "Initial Version".
+Lets start by adding a Task Node to our project, naming it Questionnaire and setting it to "QuetionnaireExample" and the version to "Initial Version".
 Next, add a filter node. 
+Connect the Next of the Questionnaire to the Smoker Filter
 Click on Edit and select "Smoker" as Filter name.
+Click on Edit Expression and select the "Questionnaire.smoker". This will generate a second output "Smoker" to the node. 
+
+.. image:: /_static/images/quickstart/project/Filter.png
+  :alt: Set the filter options
+
+Now we add an experiment Node to this project
+Connect the Smoker Output of the Filter to the SmokerExperiment.
+Edit this Experiment, setting The experiment to the one created in the Experiment Tutorial (or the example experiment). 
+
+.. image:: /_static/images/quickstart/project/Experiment.png
+  :alt: Set the experiment options
+
+Now, we add a RandomNode to the project and connect the default value of the Smoke Filter to its previous.
+We Set 2 outputs for the random node, to randomly have a Non smoker go to one of two tasks. 
+
+.. image:: /_static/images/quickstart/project/Random.png
+  :alt: Set the experiment options
+
+We now add two more Task Nodes and connect their previous to outputs 1 or 2 of the random node. 
+We can select any task for these two nodes. 
+
+Finally we add a "finishing task" and connect the next of the experiment and the two random tasks to it.
+
+This should lead to a view similar to the following. 
+
+.. image:: /_static/images/quickstart/project/Final.png
+  :alt: Final Project View
 
 
+Save your project and give it a try using the Run button. 
 
-
-To create A Task Node in he experiment click on the TaskNode Button on the left. 
-You can also drag and drop a Task node onto the experiment area. 
-You can rename the Element by clicking on the Thre Bar Manu, and selecting Rename.
-
-.. image:: /_static/images/quickstart/experiment/Rename.png
-  :alt: Rename the Task
-
-
-Modify your Experiment
-----------------------
-
-Let's rename it to questionnaire (as was done before). 
-Currently, this task is just a place holder. We will now assign the actual task we want to perform to it.
-This can be done by clicking 'edit' in the Task Node. 
-
-.. image:: /_static/images/quickstart/experiment/TaskEdit.png
-  :alt: Edit the Task
-
-We will create this task as a questionnaire, with the actual task being the "QuestionnaireExample" and the Version being the 
-"Initial Version" of this task.
-
-For this tutorial, we wil ignore the other settings (output data and persistent data).
-Those will be detailed in the Project Tutorial.
-
-Now that we have added our questionnaire, let's also add a second task, call it "Experiment"
-and assign it the "ElangExp" task. 
-
-Now we have to connect our two tasks to indicate the "normal" order of the tasks within the experiment.
-The green border around our Questionnaire task indicates that this is the normal starting task of the experiment.
-draw a line from the next field of the Questionnaire to the previous field of the Experiment node.
-
-
-Saving your Experiment
-----------------------
-
-Let's give our Experiment a name (click on the cog wheel in the upper left) and select a name. 
-You can opt to have the experiment be a private experiment, which would hide it from other researchers. 
-By default all experiments are public, meaning all users of the platform can benefit from new experiments created by other researchers.
-
-Finally click on the floppy disk icon to save the experiment.
-As with all other elements on the platform, each saving creates a new Version of the element, allowing you to always go back to 
-what you had before.
 
 
