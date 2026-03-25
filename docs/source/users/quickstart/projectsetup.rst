@@ -1,30 +1,34 @@
-Quickstart : Experiment
-=======================
+Quickstart : Project
+====================
 
-This guid shows you how to set up a new experiment and how to use it in a Project
+This guide shows you how to set up a new project and how to use it in SOILE.
 Let's begin
 
-Initialize a new Experiment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Initialize a new Project
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a Experiment you go to Project Editing -> Experiments -> New, which will lead you to the following view
+To create a Project you go to Project Editing -> Project -> New, which will lead you to the following view
 
-.. image:: /_static/images/quickstart/experiment/ExperimentView.png
-  :alt: Experiment Creation View
+The overall setup is the same as for experiments, and you can do pretty much the same things in a project that you can do in an experiment.
+The main difference is that Experiments are conceptually more about grouping tasks together, while projects are the blueprints for studies. 
+We will now create our first project AND look at a few features that we have passed by in the experiment setup. 
 
-In an experiment, you can combine multiple tasks into a specified group or a specifc order.
-E.g. if you for several projects, want to have the same questionnaires in the beginning, instead of adding 
-them to the project each time, you can add them into an experiment and just add the experiment to the respective projects. 
-An experiment can also be used to create a group of tasks, that you want to randomize in your project (i.e. you want participants to 
-go through all of the tasks, but in a random order). 
+Create your first project
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Start building your experiment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What we want to do in the project is to:
+1. Have an initial questionnaire.
+2. Then, depending on whether we have a smoker or non smoker, we either want to run an experiment or just one of two tasks.
+   - in the experiment we want to randomize the order of the tasks contained, as to not bias the results by the order
+3. Finally we want both pathes to run a final Task, which is the same for smokers and non smokers.
 
-For this tutorial we will create a simple experiment with two tasks. 
 
-Add an Experiment
------------------
+Lets start by adding a Task Node to our project, setting it to "QuetionnaireExample" and the version to "Initial Version".
+Next, add a filter node. 
+Click on Edit and select "Smoker" as Filter name.
+
+
+
 
 To create A Task Node in he experiment click on the TaskNode Button on the left. 
 You can also drag and drop a Task node onto the experiment area. 
@@ -69,7 +73,4 @@ Finally click on the floppy disk icon to save the experiment.
 As with all other elements on the platform, each saving creates a new Version of the element, allowing you to always go back to 
 what you had before.
 
-Test your experiment
---------------------
-After you have saved an experiment, you can pilot it, to see what would happen when you walk through it. 
-To do so, click on the arrow button in the upper left side.
+

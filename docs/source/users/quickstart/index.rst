@@ -17,4 +17,5 @@ The quickstart consists of the following steps:
    :caption: Contents:
 
    tasksetup
-   
+   experimentsetup
+   projectsetup
