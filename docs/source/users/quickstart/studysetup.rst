@@ -18,6 +18,9 @@ NOTE: Even if the project gets deleted from the UI, the study will still run and
 Study View
 ~~~~~~~~~~
 
+.. image:: /_static/images/quickstart/study/overview.png
+  :alt: Study View
+
 In the study view, you can activate the study and change it's properties. 
 You can add collaborators to the study with different levels of access, READ allows reading the participant data, 
 full allows modification of the study. 
@@ -25,7 +28,8 @@ Once a study is activated and has participants, the Project and project version 
 This is to ensure data integrity in studies, since a change in the study could lead to the comparision of different types of data. 
 Once you activate a study, there will be a link that you can copy and provide to your participants.
 If you want to require a access token, you can create permanent (useable multiple times) or individual access tokens,
- which will be excahnged for a participation token. 
+which will be excahnged for a participation token. 
+Data from participants will be visible in the Available Data view. 
  
 
 

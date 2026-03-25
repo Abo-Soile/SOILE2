@@ -19,3 +19,4 @@ The quickstart consists of the following steps:
    tasksetup
    experimentsetup
    projectsetup
+   studysetup
