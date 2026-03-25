@@ -2,11 +2,12 @@
 
 ## Prerequesites:
 
-[Docker](https://docs.docker.com/engine/install/), for the mongo database  
-[NGINX](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) for reverse proxying Front and back-end and handling https issues  
-[Let's encrypt](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/) for nginx for https certificates  
-npm and a current [nodeJS](https://github.com/nodesource/distributions) (definitely working is 18) for frontend setup  
-git for installation
+- [Docker](https://docs.docker.com/engine/install/), for the mongo database
+- [NGINX](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/) for reverse proxying Front and back-end and handling https issues
+- [Let's encrypt](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/) for nginx for https certificates
+- npm and a current [nodeJS](https://github.com/nodesource/distributions) (definitely working is 18) for frontend setup
+- git for installation
+- A local mail server that allows sending of emails (e.g. postfix).
 
 ## Soile installation
 
@@ -38,8 +39,7 @@ There are 2 Files that need modification:
      - `http_server.sslStoreFile` : "/path/to/your/cerificate/fullchain.pem",
      - `http_server.sslSecret` : "/path/to/your/cerificate/privkey.pem",
      - `http_server.corsURLS` : ["https://your.domain", "https://your.domain:443"]
-       - This is important to allow the backend to reply to the front-end. If not set, browsers will throw CORS violations,
-         as the back-end server runs on a different port than the nginx hosting the system.
+       - This is important to allow the backend to reply to the front-end. If not set, browsers will throw CORS violations, as the back-end server runs on a different port than the nginx hosting the system. HOwever you can also set up nginx to work as a in-between proxy. 
 
 ### Run the setup script
 
@@ -53,9 +53,10 @@ You will need to build front and back end once when the system is set up. to do 
 
 ### Set up Nginx
 
-You can potentially run front and back end on different machines (not explained here), but if running it on the same machine,
-this requires a bit more fiddling around in the nginx configuration. The reason is, that there are a few requests to the front-end
-that need to be forwarded to the back-end as the back-end also acts as a file server for task files, and needs to check:
+You can potentially run front and back end on different machines (not explained here), but if running it 
+on the same machine, this requires a bit more fiddling around in the nginx configuration. The reason is, 
+that there are a few requests to the front-end that need to be forwarded to the back-end as the back-end 
+also acts as a file server for task files, and needs to check:
 
 - Whether the request is authorized to access the files
 - Which file is actually requested based on the version requested.
@@ -90,3 +91,7 @@ That's it, your server should now be running and working.
 ## Updating to the latest codebase
 
 This is pretty straight forward. Simply run `./updateSOILE.sh` from the main folder. This should shut down the system, update it, and then restart it.
+
+
+## Ensuring that the service is running on reboot
+
