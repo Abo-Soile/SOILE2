@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quickstart : Project &mdash; SOILE 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css?v=64f265d2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/soile_custom.css?v=23852827" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Quickstart : Study" href="studysetup.html" />
+    <link rel="prev" title="Quickstart : Experiment" href="experimentsetup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SOILE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Researcher’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../concepts.html">SOILE Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Setting up a small project in SOILE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tasksetup.html">Quickstart : Task</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experimentsetup.html">Quickstart : Experiment</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Quickstart : Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initialize-a-new-project">Initialize a new Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-your-first-project">Create your first project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="studysetup.html">Quickstart : Study</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks/index.html">Tasks in the SOILE Framework</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SOILE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Researcher’s Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Setting up a small project in SOILE</a></li>
+      <li class="breadcrumb-item active">Quickstart : Project</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/users/quickstart/projectsetup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quickstart-project">
+<h1>Quickstart : Project<a class="headerlink" href="#quickstart-project" title="Link to this heading"></a></h1>
+<p>This guide shows you how to set up a new project and how to use it in SOILE.
+Let’s begin</p>
+<section id="initialize-a-new-project">
+<h2>Initialize a new Project<a class="headerlink" href="#initialize-a-new-project" title="Link to this heading"></a></h2>
+<p>To create a Project you go to Project Editing -&gt; Project -&gt; New, which will lead you a view similar to the experiment view.
+The overall setup is the same as for experiments, and you can do pretty much the same things in a project that you can do in an experiment.
+The main difference is that Experiments are conceptually more about grouping tasks together, while projects are the blueprints for studies.
+We will now create our first project AND look at a few features that we have passed by in the experiment setup.</p>
+</section>
+<section id="create-your-first-project">
+<h2>Create your first project<a class="headerlink" href="#create-your-first-project" title="Link to this heading"></a></h2>
+<p>What we want to do in the project is to:
+1. Have an initial questionnaire.
+2. Then, depending on whether we have a smoker or non smoker, we either want to run an experiment or just one of two tasks.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>in the experiment we want to randomize the order of the tasks contained, as to not bias the results by the order</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Finally we want both pathes to run a final Task, which is the same for smokers and non smokers.</p></li>
+</ol>
+<p>Lets start by adding a Task Node to our project, naming it Questionnaire and setting it to “QuetionnaireExample” and the version to “Initial Version”.
+Next, add a filter node.
+Connect the Next of the Questionnaire to the Smoker Filter
+Click on Edit and select “Smoker” as Filter name.
+Click on Edit Expression and select the “Questionnaire.smoker”. This will generate a second output “Smoker” to the node.</p>
+<img alt="Set the filter options" src="../../_images/Filter.png" />
+<p>Now we add an experiment Node to this project
+Connect the Smoker Output of the Filter to the SmokerExperiment.
+Edit this Experiment, setting The experiment to the one created in the Experiment Tutorial (or the example experiment).</p>
+<img alt="Set the experiment options" src="../../_images/Experiment.png" />
+<p>Now, we add a RandomNode to the project and connect the default value of the Smoke Filter to its previous.
+We Set 2 outputs for the random node, to randomly have a Non smoker go to one of two tasks.</p>
+<img alt="Set the experiment options" src="../../_images/Random.png" />
+<p>We now add two more Task Nodes and connect their previous to outputs 1 or 2 of the random node.
+We can select any task for these two nodes.</p>
+<p>Finally we add a “finishing task” and connect the next of the experiment and the two random tasks to it.</p>
+<p>This should lead to a view similar to the following.</p>
+<img alt="Final Project View" src="../../_images/Final.png" />
+<p>Save your project and give it a try using the Run button.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="experimentsetup.html" class="btn btn-neutral float-left" title="Quickstart : Experiment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="studysetup.html" class="btn btn-neutral float-right" title="Quickstart : Study" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Thomas Pfau, Daniel Warna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

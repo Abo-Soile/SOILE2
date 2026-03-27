@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuring the system &mdash; SOILE 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css?v=64f265d2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/soile_custom.css?v=23852827" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SOILE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../users/index.html">Researcher’s Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SOILE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuring the system</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/admin/setup/configuration.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuring-the-system">
+<h1>Configuring the system<a class="headerlink" href="#configuring-the-system" title="Link to this heading"></a></h1>
+<p>There are a few configuration files that you will need to set up to get SOILE running.
+This is a step by step guide on the different files you have to touch in order to set it up.</p>
+<section id="nginx-template">
+<h2>NGINX template<a class="headerlink" href="#nginx-template" title="Link to this heading"></a></h2>
+<p>The <cite>nginx/soile.conf</cite> file contains a template for a nginx configuration that works with the service.
+You will need to adapt the following parts:
+1. server_name &lt;server-domain&gt;</p>
+<blockquote>
+<div><p>replace the &lt;server-domain&gt; tag by whatever domain name you are running this on.</p>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+ssl_certificate &lt;/path/to/ssl_certificate&gt;;</p>
+<blockquote>
+<div><p>ssl_certificate_key &lt;/path/to/ssl_certificate_key&gt;;</p>
+</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>`
+These need to be updated according to the certificate scheme you are using (e.g. via certbot)</p>
+</li>
+<li><p>There are several <cite>proxy_pass https://localhost:&lt;soile_port&gt;;</cite> statements. These need to be updated
+to reflect the actual port used by the backend</p></li>
+</ol>
+<p>This template then needs to be copied to the <cite>/etc/nginx/conf.d/</cite> folder in order to activate it.
+Restart nginx once you have set up the deployment.</p>
+</section>
+<section id="installation-folder">
+<h2>Installation folder<a class="headerlink" href="#installation-folder" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Thomas Pfau, Daniel Warna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

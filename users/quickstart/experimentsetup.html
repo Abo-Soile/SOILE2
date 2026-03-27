@@ -1,0 +1,179 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quickstart : Experiment &mdash; SOILE 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css?v=64f265d2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/soile_custom.css?v=23852827" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Quickstart : Project" href="projectsetup.html" />
+    <link rel="prev" title="Quickstart : Task" href="tasksetup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SOILE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Researcher’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../concepts.html">SOILE Concepts</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Setting up a small project in SOILE</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tasksetup.html">Quickstart : Task</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Quickstart : Experiment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#initialize-a-new-experiment">Initialize a new Experiment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#start-building-your-experiment">Start building your experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="projectsetup.html">Quickstart : Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="studysetup.html">Quickstart : Study</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks/index.html">Tasks in the SOILE Framework</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SOILE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Researcher’s Guide</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Setting up a small project in SOILE</a></li>
+      <li class="breadcrumb-item active">Quickstart : Experiment</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/users/quickstart/experimentsetup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quickstart-experiment">
+<h1>Quickstart : Experiment<a class="headerlink" href="#quickstart-experiment" title="Link to this heading"></a></h1>
+<p>This guid shows you how to set up a new experiment and how to use it in a Project
+Let’s begin</p>
+<section id="initialize-a-new-experiment">
+<h2>Initialize a new Experiment<a class="headerlink" href="#initialize-a-new-experiment" title="Link to this heading"></a></h2>
+<p>To create a Experiment you go to Project Editing -&gt; Experiments -&gt; New, which will lead you to the following view</p>
+<img alt="Experiment Creation View" src="../../_images/ExperimentView.png" />
+<p>In an experiment, you can combine multiple tasks into a specified group or a specifc order.
+E.g. if you for several projects, want to have the same questionnaires in the beginning, instead of adding
+them to the project each time, you can add them into an experiment and just add the experiment to the respective projects.
+An experiment can also be used to create a group of tasks, that you want to randomize in your project (i.e. you want participants to
+go through all of the tasks, but in a random order).</p>
+</section>
+<section id="start-building-your-experiment">
+<h2>Start building your experiment<a class="headerlink" href="#start-building-your-experiment" title="Link to this heading"></a></h2>
+<p>For this tutorial we will create a simple experiment with two tasks.</p>
+<section id="add-an-experiment">
+<h3>Add an Experiment<a class="headerlink" href="#add-an-experiment" title="Link to this heading"></a></h3>
+<p>To create A Task Node in he experiment click on the TaskNode Button on the left.
+You can also drag and drop a Task node onto the experiment area.
+You can rename the Element by clicking on the Thre Bar Manu, and selecting Rename.</p>
+<img alt="Rename the Task" src="../../_images/Rename.png" />
+</section>
+<section id="modify-your-experiment">
+<h3>Modify your Experiment<a class="headerlink" href="#modify-your-experiment" title="Link to this heading"></a></h3>
+<p>Let’s rename it to questionnaire (as was done before).
+Currently, this task is just a place holder. We will now assign the actual task we want to perform to it.
+This can be done by clicking ‘edit’ in the Task Node.</p>
+<img alt="Edit the Task" src="../../_images/TaskEdit.png" />
+<p>We will create this task as a questionnaire, with the actual task being the “QuestionnaireExample” and the Version being the
+“Initial Version” of this task.</p>
+<p>For this tutorial, we wil ignore the other settings (output data and persistent data).
+Those will be detailed in the Project Tutorial.</p>
+<p>Now that we have added our questionnaire, let’s also add a second task, call it “Experiment”
+and assign it the “ElangExp” task.</p>
+<p>Now we have to connect our two tasks to indicate the “normal” order of the tasks within the experiment.
+The green border around our Questionnaire task indicates that this is the normal starting task of the experiment.
+draw a line from the next field of the Questionnaire to the previous field of the Experiment node.</p>
+</section>
+<section id="saving-your-experiment">
+<h3>Saving your Experiment<a class="headerlink" href="#saving-your-experiment" title="Link to this heading"></a></h3>
+<p>Let’s give our Experiment a name (click on the cog wheel in the upper left) and select a name.
+You can opt to have the experiment be a private experiment, which would hide it from other researchers.
+By default all experiments are public, meaning all users of the platform can benefit from new experiments created by other researchers.</p>
+<p>Finally click on the floppy disk icon to save the experiment.
+As with all other elements on the platform, each saving creates a new Version of the element, allowing you to always go back to
+what you had before.</p>
+</section>
+<section id="test-your-experiment">
+<h3>Test your experiment<a class="headerlink" href="#test-your-experiment" title="Link to this heading"></a></h3>
+<p>After you have saved an experiment, you can pilot it, to see what would happen when you walk through it.
+To do so, click on the arrow button in the upper left side.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tasksetup.html" class="btn btn-neutral float-left" title="Quickstart : Task" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="projectsetup.html" class="btn btn-neutral float-right" title="Quickstart : Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Thomas Pfau, Daniel Warna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

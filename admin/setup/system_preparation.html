@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Preparation &mdash; SOILE 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/my_theme.css?v=64f265d2" />
+      <link rel="stylesheet" type="text/css" href="../../_static/soile_custom.css?v=23852827" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SOILE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../users/index.html">Researcher’s Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SOILE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">System Preparation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/admin/setup/system_preparation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="system-preparation">
+<h1>System Preparation<a class="headerlink" href="#system-preparation" title="Link to this heading"></a></h1>
+<p>There are a few scripts which can be used to set up the SOILE server. They require the following
+prerequisites to be fullfilled:</p>
+<ul class="simple">
+<li><p>[Docker](<a class="reference external" href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a>).
+This is being used for the mongo database,
+which is assumed to run on the local machine. If the mongo db is hosted elsewhere, make sure,
+that it is properly set up (you can configure alternative hosts via <cite>dbConfig.json`</cite>).</p></li>
+<li><p>[NGINX](<a class="reference external" href="https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/">https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/</a>)
+The default installation uses nginx for hosting both the back and front end. It is used for
+https termination for frontend requests. The backend does it’s own https.</p></li>
+<li><p>[Let’s encrypt](<a class="reference external" href="https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/">https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/</a>)
+for automated certificate renewals and certificate setup</p></li>
+<li><p>npm and a current [nodeJS](<a class="reference external" href="https://github.com/nodesource/distributions">https://github.com/nodesource/distributions</a>) (definitely working is 18) for frontend setup</p></li>
+<li><p>git for installation</p></li>
+<li><p>A local mail server that allows sending of emails (e.g. postfix). Make sure, that mails from the service
+can be sent to any external address (e.g. testing via sendmail)</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Thomas Pfau, Daniel Warna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
